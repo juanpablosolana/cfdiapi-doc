@@ -119,18 +119,7 @@
 					<ul class="astro-D2KUYXWE">
 						<li class="nav-link astro-D2KUYXWE">
 								<a href="/es/introduccion" aria-current="page" class="astro-D2KUYXWE">
-									Introduction
-								</a>
-							</li>
-					</ul>
-				</div>
-			</li><li class="astro-D2KUYXWE">
-				<div class="nav-group astro-D2KUYXWE">
-					<h2 class="nav-group-title astro-D2KUYXWE">Another Section</h2>
-					<ul class="astro-D2KUYXWE">
-						<li class="nav-link astro-D2KUYXWE">
-								<a href="/en/page-4" aria-current="false" class="astro-D2KUYXWE">
-									Page 4
+									Introducción
 								</a>
 							</li>
 					</ul>
@@ -155,14 +144,56 @@
 	<section class="main-section astro-53BNYOZL">
 		<h1 class="content-title astro-53BNYOZL" id="overview">Introducción</h1>
 		<nav class="block sm:hidden astro-53BNYOZL">
-			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="R9aTj" component-url="/TableOfContents.3e2bb1f2.js" component-export="default" renderer-url="/client.e5edc40a.js" props="{&quot;headers&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;comencemos\&quot;],\&quot;text\&quot;:[0,\&quot;Comencemos\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-53BNYOZL&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}"><h2 class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#overview">Overview</a></li><li class="header-link depth-2"><a href="#comencemos">Comencemos</a></li></ul></astro-island>
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1PblV9" component-url="/TableOfContents.eb5270c3.js" component-export="default" renderer-url="/client.e5edc40a.js" props="{&quot;headers&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;comencemos\&quot;],\&quot;text\&quot;:[0,\&quot;Comencemos\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-53BNYOZL&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}"><h2 class="heading">Puedes encontrar</h2><ul><li class="header-link depth-2"><a href="#overview">Introducción</a></li><li class="header-link depth-2"><a href="#comencemos">Comencemos</a></li></ul></astro-island>
 		</nav>
-		<p><strong>¡Bienvenido a cfdi API!</strong></p><p>Nuestra api te permite conocer el estatus de las facturas emitidas por el SAT MX haciendo una consulta GET, solo necesitas la siguiente información:</p><ul>
+		<p><strong>¡Bienvenido a cfdi API!</strong></p><p>Nuestra api te permite conocer el estatus de las facturas emitidas por el SAT MX haciendo una consulta a nuestro servicio con la siguiente información:</p><ul>
 <li>✅ <strong>RFC del emisor</strong></li>
 <li>✅ <strong>RFC del receptor</strong></li>
-<li>✅ <strong>Folio fiscal</strong></li>
 <li>✅ <strong>Monto total</strong></li>
-</ul><h2 id="comencemos">Comencemos</h2><p>To get started with this theme, check out the <code>README.md</code> in your new project directory. It provides documentation on how to use and customize this template for your own project. Keep the README around so that you can always refer back to it as you build.</p><p>Found a missing feature that you can’t live without? Please suggest it on Discord <a href="https://astro.build/chat">(#ideas-and-suggestions channel)</a> and even consider adding it yourself on GitHub! Astro is an open source project and contributions from developers like you are how we grow!</p><p>Good luck out there, Astronaut. 🧑‍🚀</p>
+<li>✅ <strong>Folio fiscal</strong></li>
+</ul><p>Nosotros nos encargamos de la conexión con el webservice y te regresamos una respuesta en un JSON</p><h2 id="comencemos">Comencemos</h2><p>Simplificamos todo y con una petición <code>GET</code> puedes obtener es status de tus facturas.</p><p>✍️ Ejemplo:</p><p><code>https://www.cfdiapi.com/api/estatus/RTU111018SV3/OEE0508161P7/34800.00/49E87987-F780-42B2-AA23-4385D7CA1D75</code></p><p>✔️ Valores:</p><ul>
+<li><a href="https://www.cfdiapi.com/api/estatus/">https://www.cfdiapi.com/api/estatus/</a> ⬅️ <strong>URL base</strong></li>
+<li>RTU111018SV3 ⬅️ <strong>RFC del emisor</strong></li>
+<li>OEE0508161P7 ⬅️ <strong>RFC del receptor</strong></li>
+<li>34800.00 ⬅️ <strong>Total con centavos</strong></li>
+<li>49E87987-F780-42B2-AA23-4385D7CA1D75 Folio fiscal ⬅️ <strong>Folio fiscal</strong></li>
+</ul><p>‼️ Importante</p><p>Los datos se deben enviar en el orden descrito separados por <code>/</code> de lo contrario recibirás un mensaje de error.</p><p>👌 Respuesta satisfactoria:</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #79C0FF">&quot;s:Envelope&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #79C0FF">&quot;_attributes&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #79C0FF">&quot;xmlns:s&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">  },</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #79C0FF">&quot;s:Body&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #79C0FF">&quot;ConsultaResponse&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">      </span><span style="color: #79C0FF">&quot;_attributes&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;xmlns&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;http://tempuri.org/&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">      },</span></span>
+<span class="line"><span style="color: #C9D1D9">      </span><span style="color: #79C0FF">&quot;ConsultaResult&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;_attributes&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;xmlns:a&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;http://schemas.datacontract.org/2004/07/Sat.Cfdi.Negocio.ConsultaCfdi.Servicio&quot;</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;xmlns:i&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">        },</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;a:CodigoEstatus&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;_text&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;S - Comprobante obtenido satisfactoriamente.&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">        },</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;a:EsCancelable&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;_text&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;Cancelable con aceptaciÃ³n&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">        },</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;a:Estado&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;_text&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;Vigente&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">        },</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;a:EstatusCancelacion&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">        },</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #79C0FF">&quot;a:ValidacionEFOS&quot;</span><span style="color: #C9D1D9">: {</span></span>
+<span class="line"><span style="color: #C9D1D9">          </span><span style="color: #79C0FF">&quot;_text&quot;</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">&quot;200&quot;</span></span>
+<span class="line"><span style="color: #C9D1D9">        }</span></span>
+<span class="line"><span style="color: #C9D1D9">      }</span></span>
+<span class="line"><span style="color: #C9D1D9">    }</span></span>
+<span class="line"><span style="color: #C9D1D9">  }</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">}```</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">Happy hacking. 🧑‍🚀</span></span></code></pre>
 	</section>
 	<nav class="block sm:hidden astro-53BNYOZL">
 		
@@ -183,7 +214,7 @@
 			<aside id="grid-right" class="grid-sidebar astro-LP5XFGZC" title="Table of Contents">
 				<nav class="sidebar-nav astro-2YE6FU27" aria-labelledby="grid-right">
 	<div class="sidebar-nav-inner astro-2YE6FU27">
-		<astro-island uid="Z13As4s" component-url="/TableOfContents.3e2bb1f2.js" component-export="default" renderer-url="/client.e5edc40a.js" props="{&quot;headers&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;comencemos\&quot;],\&quot;text\&quot;:[0,\&quot;Comencemos\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-2YE6FU27&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}"><h2 class="heading">On this page</h2><ul><li class="header-link depth-2"><a href="#overview">Overview</a></li><li class="header-link depth-2"><a href="#comencemos">Comencemos</a></li></ul></astro-island>
+		<astro-island uid="1jg8T1" component-url="/TableOfContents.eb5270c3.js" component-export="default" renderer-url="/client.e5edc40a.js" props="{&quot;headers&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;comencemos\&quot;],\&quot;text\&quot;:[0,\&quot;Comencemos\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-2YE6FU27&quot;]}" ssr="" client="media" before-hydration-url="data:text/javascript;charset=utf-8,//[no before-hydration script]" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}"><h2 class="heading">Puedes encontrar</h2><ul><li class="header-link depth-2"><a href="#overview">Introducción</a></li><li class="header-link depth-2"><a href="#comencemos">Comencemos</a></li></ul></astro-island>
 		
 <ul class="astro-ZVQSX46V">
 	
