@@ -36,9 +36,6 @@ export const SIDEBAR = {
 	es: [
 		{ text: '', header: true },
 		{ text: 'Temas', header: true },
-		{ text: 'Introduction', link: 'es/introduccion' },
-
-		{ text: 'Another Section', header: true },
-		{ text: 'Page 4', link: 'en/page-4' },
+		{ text: 'Introducción', link: 'es/introduccion' },
 	],
 };
