@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Docs intro
+title: Introducción
+description: Introducción a cfdi API
 layout: ../../layouts/MainLayout.astro
 ---
 **¡Bienvenido a cfdi API!**
