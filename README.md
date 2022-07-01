@@ -36,40 +36,41 @@ Los datos se deben enviar en el orden descrito separados por `/` de lo contrario
 👌 Respuesta satisfactoria:
 
   ```json
-  {
-  "s:Envelope": {
-    "_attributes": {
-      "xmlns:s": "http://schemas.xmlsoap.org/soap/envelope/"
-    },
-    "s:Body": {
-      "ConsultaResponse": {
+{
+    "s:Envelope": {
         "_attributes": {
-          "xmlns": "http://tempuri.org/"
+            "xmlns:s": "http://schemas.xmlsoap.org/soap/envelope/"
         },
-        "ConsultaResult": {
-          "_attributes": {
-            "xmlns:a": "http://schemas.datacontract.org/2004/07/Sat.Cfdi.Negocio.ConsultaCfdi.Servicio",
-            "xmlns:i": "http://www.w3.org/2001/XMLSchema-instance"
-          },
-          "a:CodigoEstatus": {
-            "_text": "S - Comprobante obtenido satisfactoriamente."
-          },
-          "a:EsCancelable": {
-            "_text": "Cancelable con aceptaciÃ³n"
-          },
-          "a:Estado": {
-            "_text": "Vigente"
-          },
-          "a:EstatusCancelacion": {
+        "s:Body": {
+            "ConsultaResponse": {
+                "_attributes": {
+                    "xmlns": "http://tempuri.org/"
+                },
+                "ConsultaResult": {
+                    "_attributes": {
+                        "xmlns:a": "http://schemas.datacontract.org/2004/07/Sat.Cfdi.Negocio.ConsultaCfdi.Servicio",
+                        "xmlns:i": "http://www.w3.org/2001/XMLSchema-instance"
+                    },
+                    "a:CodigoEstatus": {
+                        "_text": "S - Comprobante obtenido satisfactoriamente."
+                    },
+                    "a:EsCancelable": {
+                        "_text": "Cancelable con aceptaciÃ³n"
+                    },
+                    "a:Estado": {
+                        "_text": "Vigente"
+                    },
+                    "a:EstatusCancelacion": {
 
-          },
-          "a:ValidacionEFOS": {
-            "_text": "200"
-          }
+                    },
+                    "a:ValidacionEFOS": {
+                        "_text": "200"
+                    }
+                }
+            }
         }
-      }
     }
-  }
-}```
+}
+```
 
 Happy hacking. 🧑‍🚀
